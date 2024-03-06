@@ -11,7 +11,9 @@ medScan(z.alpha, z.beta, method)
 
 \item{z.beta}{the z-test statistic for beta (mediator effect on the outcome).}
 
-\item{method}{the method to use for testing the mediation effect. It should belong to one of the six methods: \code{"Sobel"}, \code{"MaxP"}, \code{"JT_comp"}, \code{"HDMT"}, \code{"DACT"}, and \code{"Sobel_comp"}.
+\item{method}{the method to use for testing the mediation effect. It should
+belong to one of the six methods: \code{"Sobel"}, \code{"MaxP"}, \code{"JT_comp"}, \code{"HDMT"},
+\code{"DACT"}, and \code{"Sobel_comp"}.
 (1) Sobel’s test (\code{method = "Sobel"}), (2) Max P test
 (\code{method = "MaxP"}), (3) joint significance test under the composite null hypothesis (\code{method = "JT_comp"}), (4) high
 dimensional mediation testing (\code{method = "HDMT"}), (5) Divide-Aggregate Composite-null Test (\code{method = "DACT"}), and
@@ -19,12 +21,10 @@ dimensional mediation testing (\code{method = "HDMT"}), (5) Divide-Aggregate Com
 }
 \value{
 A list that contains
-\itemize{
-\item{pvalues: }{p-values for all mediators from the chosen method.}
-\item{pi: }{the estimated proportions of the three null cases from the HDMT
+\item{pvalues:}{p-values for all mediators from the chosen method.}
+\item{pi:}{the estimated proportions of the three null cases from the HDMT
 method. pi00 is the proportion of alpha=beta=0; pi01 is the proportion of
 alpha=0 and beta!=0; and pi10 is the proportion of alpha!=0 and beta=0.}
-}
 }
 \description{
 A collection of methods for large scale single mediator hypothesis
@@ -78,9 +78,14 @@ qqman::qq(obj$pvalues,  xlim = c(0,4), ylim = c(0,4), main = "Sobel")
 }
 \references{
 Sobel, M. E. (1982). Asymptotic confidence intervals for indirect effects in structural equation models. Sociological methodology, 13, 290-312.
+
 MacKinnon, D. P., Lockwood, C. M., Hoffman, J. M., West, S. G., & Sheets, V. (2002). A comparison of methods to test mediation and other intervening variable effects. Psychological methods, 7(1), 83.
+
 Huang, Y. T. (2019). Genome-wide analyses of sparse mediation effects under composite null hypotheses. The Annals of Applied Statistics, 13(1), 60-84.
+
 Liu, Z., Shen, J., Barfield, R., Schwartz, J., Baccarelli, A. A., & Lin, X. (2022). Large-scale hypothesis testing for causal mediation effects with applications in genome-wide epigenetic studies. Journal of the American Statistical Association, 117(537), 67-81.
+
 Dai, J. Y., Stanford, J. L., & LeBlanc, M. (2022). A multiple-testing procedure for high-dimensional mediation hypotheses. Journal of the American Statistical Association, 117(537), 198-213.
-Du, J., Zhou, X., Hao, W., Liu, Y., Smith, J. A., & Mukherjee, B. (2022). Methods for Large-scale Single Mediator Hypothesis Testing: Possible Choices and Comparisons. arXiv preprint arXiv:2203.13293.
+
+Du, Jiacong, et al. "Methods for large‐scale single mediator hypothesis testing: Possible choices and comparisons." Genetic Epidemiology 47.2 (2023): 167-184.
 }
